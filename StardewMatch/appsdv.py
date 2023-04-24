@@ -6,9 +6,9 @@
 def home_display():
     print('Welcome to\nFind Your Perfect Partner\nfor Stardew Valley\n\n'
           'Make your selection with the number next to the selection and press enter\n'
-          '1. Find your match: Use this to find your perfect Stardew Valley bachelor or bachelorette.\n'
-          '2. Bachelor/Bachelorette List: Use this to view information on the bachelors/bachelorettes.\n'
-          '3. Create Profile: \n'
+          '1. Find your match: Answer out questionnaire to find your perfect Stardew Valley bachelor or bachelorette.\n'
+          '2. Bachelor/Bachelorette List: Select from a list to view information on the bachelors/bachelorettes.\n'
+          '3. Create Profile: Create a Profile to save your match result and questionnaire answers.\n'
           '4. Login: Get to your Profile from here.\n'
           '5. About: Find out more about this app and the author.\n'
           '0. Home: This selection will take you to the Home Page\n'
@@ -28,7 +28,9 @@ def nav_display():
 
 
 def bachelor_bachelorette_display():
-    print('Bachelors:      Bachelorettes:\n'
+    print('Here is a list of our amazing bachelors and bachelorettes. Use the number next to their name \n'
+          'to view more information about them. Find out their personality, likes and dislikes.\n'
+          'Bachelors:      Bachelorettes:\n'
           '11. Sam         17. Penny\n'
           '12. Harvey      18. Maru\n'
           '13. Shane       19. Abigail\n'
@@ -40,7 +42,8 @@ def bachelor_bachelorette_display():
 
 
 def about_display():
-    print('Mission: If you are like myself you are never quite sure who to romance when you play Stardew Valley. With\n'
+    print('About Page\n'
+          'Mission: If you are like myself you are never quite sure who to romance when you play Stardew Valley. With\n'
           'this app I hope that someone who is new to the game or on their 100th play through will be able to find\n'
           'their perfect match in the game.\n\n'
           'History: I have been playing Stardew Valley for about 4 years and have put more than 200 hours into playing\n'
