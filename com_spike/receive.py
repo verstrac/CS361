@@ -4,6 +4,7 @@
 # Copied from: https://www.rabbitmq.com/tutorials/tutorial-one-python.html, 4/25/23
 import pika, sys, os
 
+
 def main():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
     channel = connection.channel()
