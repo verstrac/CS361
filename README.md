@@ -5,4 +5,4 @@
 - Example Call:
 - user_input = input('Give me an item: ')
 - with open('item_service.txt', 'w', encoding='utf-8') as f:
--    f.write(user_input)
+ - f.write(user_input)
