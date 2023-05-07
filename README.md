@@ -16,4 +16,4 @@ microservice has been placed in the item_service.txt file and read it.
             item_text = f.read()
 ```
 
-![CS361UMLsnip](https://user-images.githubusercontent.com/71857152/236573975-897c57e8-1b8a-473e-bee5-cc9c9838f29b.png)
+![image](https://user-images.githubusercontent.com/71857152/236690372-27b3d8ae-0dbf-48f4-bd21-927f06048eef.png)
