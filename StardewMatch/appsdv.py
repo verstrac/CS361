@@ -1,6 +1,7 @@
 # Author: Caleb Verstraete
 # Date: 4/20/23
 # CS361
+import time
 
 
 def home_display():
@@ -57,37 +58,61 @@ def about_display():
           'With the Bachelor/Bachelorette List you can explore the personalities, likes and dislikes of the people of\n'
           'Stardew Valley. So please take the app for a spin and thank you for your time.\n\n')
     nav_display()
+    return
+
+
+def bachelor_request(user_sel):
+    with open('bachelor.txt', 'w', encoding='utf-8') as f:
+        f.write(user_sel)
+        time.sleep(1)
+    while True:
+        with open('bachelor.txt', 'r+', encoding='utf-8') as f:
+            bachelor = f.read()
+            if bachelor != user_sel:
+                print(bachelor)
+                f.truncate(0)
+                f.seek(0)
+                break
+            else:
+                time.sleep(1)
+    nav_display()
+    return
 
 
 def main():
     user_sel = None
+    previous_sel = None
     while True:
-        if user_sel is None or user_sel == '0':
+        if user_sel is None or user_sel == 0:
             home_display()
-        elif user_sel == '1':
+        elif user_sel == 1:
             print('Not done yet')
-            user_sel = '0'
+            user_sel = 0
             home_display()
-        elif user_sel == '2':
+        elif user_sel == 2:
             bachelor_bachelorette_display()
-        elif user_sel == '3':
+        elif user_sel == 3:
             print('Not done yet')
-            user_sel = '0'
+            user_sel = 0
             home_display()
-        elif user_sel == '4':
+        elif user_sel == 4:
             print('Not done yet')
-            user_sel = '0'
+            user_sel = 0
             home_display()
-        elif user_sel == '5':
+        elif user_sel == 5:
             about_display()
-        elif user_sel == '9':
+        elif user_sel == 9:
             return
+        elif previous_sel == 2 and 11 <= user_sel <= 22:
+            print('Call to Bachelor microservice with: %d\n\n' % user_sel)
+            bachelor_request(str(user_sel))
         else:
             print('invalid selection')
             user_sel = '0'
             home_display()
 
-        user_sel = input('Selection: ')
+        previous_sel = user_sel
+        user_sel = int(input('Selection: '))
 
 
 if __name__ == '__main__':
